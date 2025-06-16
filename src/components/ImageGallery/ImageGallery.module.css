@@ -1,0 +1,28 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 40px) / 3);
+    padding: 60px 15px 0 15px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cardItem {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 320px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,25 @@
+.loadMoreBtn {
+    background: linear-gradient(135deg, #646cff, rgba(147, 51, 234, 0.77), #454cee);
+    color: #ffffff;
+    padding: 8px 16px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    background-size: 400% 400%;
+    animation: gradientFlow 10s ease infinite;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
