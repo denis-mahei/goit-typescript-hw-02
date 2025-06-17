@@ -1,0 +1,6 @@
+/*Fonts*/
+@import url('./fonts.css');
+/*base styles*/
+@import url('./index.css');
+/*normalizer*/
+@import '@denis-mahei/custom-normalizer';

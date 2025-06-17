@@ -1,15 +1,17 @@
 .container {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
     flex-basis: calc((100% - 40px) / 3);
-    padding: 60px 15px 0 15px;
+    padding: 70px 0 20px 0;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 .cardItem {

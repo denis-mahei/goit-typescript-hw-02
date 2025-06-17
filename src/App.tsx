@@ -1,12 +1,13 @@
-import './App.module.css';
-import SearchBar from './components/SearchBar/SearchBar';
 import { useEffect, useState } from 'react';
 import { Loader } from './components/Loader/Loader';
-import { fetchImageWithQuery } from './unsplash-api.js';
+import { fetchImageWithQuery } from './unsplash-api';
 import { ImageGallery } from './components/ImageGallery/ImageGallery';
-import ImageModal from './components/ImageModal/ImageModal';
 import { ErrorMessage } from './components/ErrorMessage/ErrorMessage';
+import ImageModal from './components/ImageModal/ImageModal';
+import SearchBar from './components/SearchBar/SearchBar';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
+
+import './App.module.css';
 
 const App = () => {
   const [images, setImages] = useState([]); // for images request
