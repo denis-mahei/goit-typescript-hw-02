@@ -6,17 +6,20 @@ import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import ImageModal from '../ImageModal/ImageModal';
 import SearchBar from '../SearchBar/SearchBar';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import { UnsplashImage } from '../../unsplash-api';
 
 import './App.module.css';
 
 const App = () => {
-  const [images, setImages] = useState([]); // for images request
-  const [loading, setLoading] = useState(false); // show loader
-  const [error, setError] = useState(null); // for error
-  const [noResults, setNoResults] = useState(false); // if no results...
-  const [page, setPage] = useState(1); // state for current page pagination
-  const [searchQuery, setSearchQuery] = useState(''); // search field state
-  const [selectedImage, setSelectedImage] = useState(null); // state for modal
+  const [images, setImages] = useState<UnsplashImage[]>([]); // for images request
+  const [loading, setLoading] = useState<boolean>(false); // show loader
+  const [error, setError] = useState<string | null>(null); // for error
+  const [noResults, setNoResults] = useState<boolean>(false); // if no results...
+  const [page, setPage] = useState<number>(1); // state for current page pagination
+  const [searchQuery, setSearchQuery] = useState<string>(''); // search field state
+  const [selectedImage, setSelectedImage] = useState<UnsplashImage | null>(
+    null
+  ); // state for modal
 
   const handleSearch = async (query, page) => {
     try {
