@@ -1,7 +1,14 @@
-import ImageCard from '../ImageCard/ImageCard.tsx';
+import ImageCard from '../ImageCard/ImageCard';
+import { UnsplashImage } from '@/unsplash-api';
+
 import css from './ImageGallery.module.css';
 
-export const ImageGallery = ({ items, onImageClick }) => {
+interface PropsGallery {
+  items: UnsplashImage[];
+  onImageClick: () => void;
+}
+
+export const ImageGallery = ({ items, onImageClick }: PropsGallery) => {
   return (
     <div className={css.container}>
       <ul className={css.cardContainer}>

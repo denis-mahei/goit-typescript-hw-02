@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Loader } from '../Loader/Loader';
-import { fetchImageWithQuery } from '../../unsplash-api';
+import { fetchImageWithQuery } from '@/unsplash-api';
 import { ImageGallery } from '../ImageGallery/ImageGallery';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import ImageModal from '../ImageModal/ImageModal';
 import SearchBar from '../SearchBar/SearchBar';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
-import { UnsplashImage } from '../../unsplash-api';
+import { UnsplashImage } from '@/unsplash-api';
 
 import './App.module.css';
 
@@ -21,7 +21,7 @@ const App = () => {
     null
   ); // state for modal
 
-  const handleSearch = async (query, page) => {
+  const handleSearch = async (query: string, page: number) => {
     try {
       setLoading(true);
       const results = await fetchImageWithQuery(query, page);
@@ -49,7 +49,7 @@ const App = () => {
     setPage((prev) => prev + 1);
   };
 
-  const handleFormSubmit = (query) => {
+  const handleFormSubmit = (query: string) => {
     setSearchQuery(query);
     setPage(1);
     setImages([]);
@@ -63,13 +63,14 @@ const App = () => {
     handleSearch(searchQuery, page);
   }, [searchQuery, page]);
 
-  const handleModalOpen = (item) => {
+  const handleModalOpen = (item: UnsplashImage) => {
     setSelectedImage(item);
   };
 
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
+
   return (
     <>
       <SearchBar onSearch={handleFormSubmit} onError={setError} />

@@ -1,5 +1,6 @@
-const ImageCard = ({ item, onClick }) => {
-  console.log(item);
+import { UnsplashImage } from '@/unsplash-api';
+
+const ImageCard = ({ item: UnsplashImage, onClick }) => {
   return (
     <img
       src={item.urls.small}
