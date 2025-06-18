@@ -36,7 +36,12 @@ const App = () => {
       if (page === 1) {
         setImages(results);
       } else {
-        setImages((prev) => [...prev, ...results]);
+        setImages((prev) => {
+          const filtered = results.filter(
+            (newImage) => !prev.some((oldImage) => oldImage.id === newImage.id)
+          );
+          return [...prev, ...filtered];
+        });
       }
     } catch (e) {
       setError('Oops! Something went wrong. Please try again.');

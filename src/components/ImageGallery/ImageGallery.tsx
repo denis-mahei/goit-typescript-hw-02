@@ -1,4 +1,4 @@
-import ImageCard from '../ImageCard/ImageCard';
+import ImageCard from '@components/ImageCard/ImageCard';
 import { UnsplashImage } from '@/unsplash-api';
 
 import css from './ImageGallery.module.css';

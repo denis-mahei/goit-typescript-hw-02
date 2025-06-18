@@ -1,6 +1,6 @@
 import { UnsplashImage } from '@/unsplash-api';
 
-const ImageCard = ({ item: UnsplashImage, onClick }) => {
+const ImageCard = ({ item, onClick }) => {
   return (
     <img
       src={item.urls.small}
