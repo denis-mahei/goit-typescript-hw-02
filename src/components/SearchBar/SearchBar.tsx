@@ -1,10 +1,14 @@
-import css from './SearchBar.module.css';
+import React from 'react';
 import { TbPhotoSearch } from 'react-icons/tb';
+import css from './SearchBar.module.css';
+
+interface Interface {}
 
 const SearchBar = ({ onSearch, onError }) => {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target;
+
+    const form = e.target as HTMLFormElement;
     const query = form.elements.query.value;
 
     if (form.elements.query.value.trim() === '') {

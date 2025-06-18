@@ -1,7 +1,9 @@
 import toast, { Toaster } from 'react-hot-toast';
 import { useEffect, useRef } from 'react';
 
-export const ErrorMessage = ({ message }) => {
+type Props = { message: string };
+
+export const ErrorMessage = ({ message }: Props) => {
   const hasShown = useRef(false);
 
   useEffect(() => {

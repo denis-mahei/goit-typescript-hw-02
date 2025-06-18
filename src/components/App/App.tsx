@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Loader } from '../Loader/Loader';
+import { Loader } from '@components/Loader/Loader';
 import { fetchImageWithQuery } from '@/unsplash-api';
-import { ImageGallery } from '../ImageGallery/ImageGallery';
-import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
-import ImageModal from '../ImageModal/ImageModal';
-import SearchBar from '../SearchBar/SearchBar';
-import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import { ImageGallery } from '@components/ImageGallery/ImageGallery';
+import { ErrorMessage } from '@components/ErrorMessage/ErrorMessage';
 import { UnsplashImage } from '@/unsplash-api';
+import ImageModal from '@components/ImageModal/ImageModal';
+import SearchBar from '@components/SearchBar/SearchBar';
+import LoadMoreBtn from '@components/LoadMoreBtn/LoadMoreBtn';
 
 import './App.module.css';
 

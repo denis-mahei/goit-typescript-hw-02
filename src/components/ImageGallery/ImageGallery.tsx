@@ -1,11 +1,11 @@
-import ImageCard from '@components/ImageCard/ImageCard';
 import { UnsplashImage } from '@/unsplash-api';
+import ImageCard from '@components/ImageCard/ImageCard';
 
 import css from './ImageGallery.module.css';
 
 interface PropsGallery {
   items: UnsplashImage[];
-  onImageClick: () => void;
+  onImageClick: (item: UnsplashImage) => void;
 }
 
 export const ImageGallery = ({ items, onImageClick }: PropsGallery) => {

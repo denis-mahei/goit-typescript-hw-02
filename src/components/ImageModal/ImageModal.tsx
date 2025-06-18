@@ -1,7 +1,14 @@
-import css from './ImageModal.module.css';
+import { UnsplashImage } from '@/unsplash-api';
 import ReactModal from 'react-modal';
 
-const ImageModal = ({ item, onClose }) => {
+import css from './ImageModal.module.css';
+
+interface Props {
+  item: UnsplashImage;
+  onClose: () => void;
+}
+
+const ImageModal = ({ item, onClose }: Props) => {
   return (
     <ReactModal
       style={{
@@ -10,7 +17,7 @@ const ImageModal = ({ item, onClose }) => {
           borderRadius: '5px',
         },
       }}
-      isOpen={item}
+      isOpen={true}
       onRequestClose={onClose}
       contentLabel="image modal"
       overlayClassName={css.backdrop}

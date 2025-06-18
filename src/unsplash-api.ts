@@ -7,6 +7,10 @@ const apiKeyAuth = import.meta.env.VITE_API_KEY;
 export interface UnsplashImage {
   id: string;
   description: string;
+  alt_description?: string;
+  user?: {
+    name?: string;
+  };
   urls: {
     small: string;
     regular: string;
