@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { TbPhotoSearch } from 'react-icons/tb';
+
 import css from './SearchBar.module.css';
 
-interface Interface {}
+interface Props {
+  onSearch: (query: string) => void;
+  onError: (message: string) => void;
+}
 
-const SearchBar = ({ onSearch, onError }) => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const SearchBar = ({ onSearch, onError }: Props) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     const form = e.target as HTMLFormElement;
-    const query = form.elements.query.value;
+    const queryInput = form.elements.namedItem('query') as HTMLInputElement;
+    const query = queryInput.value;
 
-    if (form.elements.query.value.trim() === '') {
+    if (query.trim() === '') {
       onError('Please enter a search term!');
       return;
     }
