@@ -1,4 +1,4 @@
-import { UnsplashImage } from '@/unsplash-api';
+import { UnsplashImage } from '../../unsplash-api';
 
 interface Props {
   item: UnsplashImage;

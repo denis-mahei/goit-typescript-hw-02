@@ -1,4 +1,4 @@
-import { UnsplashImage } from '@/unsplash-api';
+import { UnsplashImage } from '../../unsplash-api';
 import ReactModal from 'react-modal';
 
 import css from './ImageModal.module.css';
